@@ -16,7 +16,7 @@ object DayOne {
       } else
         whatDisValue(line)
     )
-    return transform
+    transform
   }
 
   private def part2Update(line: String): String = {
