@@ -8,6 +8,7 @@ import Answer._
   val answer = day match {
     case "1" => Answer.dayOne
     case "2" => Answer.dayTwo
+    case "3" => Answer.dayThree
     case _ => "unknown day, try again :P"
   }
 

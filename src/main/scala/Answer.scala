@@ -5,8 +5,10 @@ import DayTwo._
 // Yes this is just an import hider for now
 object Answer {
   
-  val dayOne = DayOne.answer()
+  val dayOne: String = DayOne.answer()
 
-  val dayTwo = DayTwo.answer()
+  val dayTwo: String = DayTwo.answer()
+  
+  val dayThree: String = DayThree.answer()
 
 }

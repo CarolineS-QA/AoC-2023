@@ -3,12 +3,12 @@ import scala.io.Source
 import InputUtils._
 
 object DayOne {
-  val input = Source.fromFile("src/main/resources/aoc-day1-input.txt").mkString
+  val input: String = Source.fromFile("src/main/resources/aoc-day1-input.txt").mkString
 
   /** On each line, the calibration value is
    * combining the first digit and the last digit (in that order) to form a single two-digit number.
    **/
-  def extractCalibrationValues(string: String, part2: Boolean = false): Array[Int] = {
+  private def extractCalibrationValues(string: String, part2: Boolean = false): Array[Int] = {
     val lines = splitByLine(string)
     val transform = lines.map(line =>
       if(part2) {
@@ -19,7 +19,7 @@ object DayOne {
     return transform
   }
 
-  def part2Update(line: String): String = {
+  private def part2Update(line: String): String = {
     //watch out for where two numbers share a letter eg. twone, nineight, eightwo
     line
       .replace("one", "o1e")
@@ -34,7 +34,7 @@ object DayOne {
   }
 
   // get first and last digits in a string (they can be the same) and create a two-digit number
-  def whatDisValue(line: String): Int = {
+  private def whatDisValue(line: String): Int = {
     val digits = line.filter(char => char.isDigit)
     val first = digits.head.asDigit
     val last = digits.last.asDigit
